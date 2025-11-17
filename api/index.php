@@ -38,8 +38,23 @@ if($metodo === "criar"){
     $livroCriado = criarLivro($dadosRecebidosJson);
 
     respostaJson(201,true,"Livro criado com sucesso",$livroCriado);
-}else{
-    respostaJson(404,false,"Não encontrado");
 }
+
+if($metodo === "listar"){
+    if($_SERVER["REQUEST_METHOD"] != "GET"){
+        respostaJson(405,false,"Método não permitido");      
+    }
+
+    $lista = buscarListaLivro();
+
+    if(empty($lista)){
+        respostaJson(404,false,"Lista vazia");    
+    }
+    respostaJson(200,true,"Lista de livros encontrada",$lista);
+}
+    
+
+respostaJson(404,false,"Não encontrado");
+
 
 ?>
