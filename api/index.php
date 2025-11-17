@@ -81,7 +81,13 @@ if($metodo === "listar"){
     }
     respostaJson(200,true,"Lista de livros encontrada",$lista);
 }
-    
+
+if($metodo === "sessao"){
+    respostaJson(200,true,"Dados da sessão",[
+        "acessos" => $_SESSION["acessos"],
+        "ultimo_acesso" => $_SESSION["ultimo_acesso"]
+    ]);
+}
 
 respostaJson(404,false,"Não encontrado");
 
