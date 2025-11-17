@@ -50,3 +50,62 @@ Todos os dados são armazenados em **cookies**, mantendo a persistência mesmo a
 │   ├── funcoesAux.php
 │   └── validacoes.php
 
+🔌 Endpoints
+📘 Criar livro
+
+POST
+/api/livros?metodo=criar
+
+Corpo da requisição (JSON):
+
+{
+  "nome": "A Seleção",
+  "autor": "Kiera Cass",
+  "ano": 2012,
+  "genero": "Romance"
+}
+
+✏ Editar livro
+
+POST
+/api/livros?metodo=editar
+
+Corpo da requisição (JSON):
+
+{
+  "id": 1,
+  "nome": "A Elite",
+  "autor": "Kiera Cass",
+  "ano": 2013,
+  "genero": "Romance"
+}
+
+📄 Listar livros
+
+GET
+/api/livros?metodo=listar
+
+Retorna todos os livros armazenados no cookie.
+
+🧠 Dados da sessão
+
+GET
+/api/livros?metodo=sessao
+
+Retorna as informações armazenadas na sessão.
+
+Resposta esperada:
+
+{
+  "status": true,
+  "mensagem": "Dados da sessão",
+  "dados": {
+    "acessos": 5,
+    "ultimo_acesso": "2025-11-17 12:45:33"
+  }
+}
+
+
+acessos → aumenta a cada requisição feita à API
+
+ultimo_acesso → registra o horário da última chamada à API
