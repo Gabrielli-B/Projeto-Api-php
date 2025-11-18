@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "9002dad7-1773-4b88-a3a6-321893d0d778",
+		"name": "API Livros PHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49734230",
+		"_collection_link": "https://gabrielliborba42-9100296.postman.co/workspace/Gabrielli-Borba's-Workspace~7d280b53-6423-4793-8059-deb8e2d7f6d9/collection/49734230-9002dad7-1773-4b88-a3a6-321893d0d778?action=share&source=collection_link&creator=49734230"
+	},
+	"item": [
+		{
+			"name": "Criar_Livro_1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"A Seleção\",\r\n  \"autor\": \"Kiera Cass\",\r\n  \"ano\": 2012,\r\n  \"genero\": \"Romance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=criar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "criar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar_livro_2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"O Hobbit\",\r\n  \"autor\": \"J.R.R. Tolkien\",\r\n  \"ano\": 1937,\r\n  \"genero\": \"Fantasia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=criar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "criar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar_Livro_3",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"O Pequeno Príncipe\",\r\n  \"autor\": \"Antoine de Saint-Exupéry\",\r\n  \"ano\": 1943,\r\n  \"genero\": \"Fábula\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=criar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "criar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar_Livros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "listar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar_Livro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"nome\": \"O Hobbit - Edição Revisada\",\r\n  \"autor\": \"J.R.R. Tolkien\",\r\n  \"ano\": 1937,\r\n  \"genero\": \"Fantasia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "editar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Erro_Metodo_Criar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=criar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "criar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Erro_Editar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 999,\r\n  \"nome\": \"Livro Inexistente\",\r\n  \"autor\": \"Teste\",\r\n  \"ano\": 2000,\r\n  \"genero\": \"Teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "editar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metodo_Sessao_1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projeto-api-php/api/index.php?metodo=sessao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projeto-api-php",
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "metodo",
+							"value": "sessao"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
